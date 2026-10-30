@@ -5,9 +5,10 @@ class Solution:
         for i in range(len(s)-1):
             if d[s[i]]<d[s[i+1]]:
                 res-=d[s[i]]
-                continue
-            res+=d[s[i]]
-        return res+d[s[-1]]
+            else:
+                res+=d[s[i]]
+        res+=d[s[-1]]
+        return res
 
 
 
